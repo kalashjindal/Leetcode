@@ -1,13 +1,6 @@
 def isPowerOfFour(n): 
-    if (n == 0): 
-        return False
-    while (n != 1): 
-            if (n % 4 != 0): 
-                return False
-            n = n // 4
-            print(n)
-              
-    return True
+    s=bin(n)[2:]  # convert decimal to binary representation
+    return s.count("1")==1 and len(s)%2!=0 and n!=1 
   
 # Driver code 
 test_no = 64
